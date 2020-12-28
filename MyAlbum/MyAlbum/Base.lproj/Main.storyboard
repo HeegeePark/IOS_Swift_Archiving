@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="hello:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CW3-Ae-1bI"/>
+                                    <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zPe-b8-JpW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -31,7 +31,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-788" y="7"/>
+            <point key="canvasLocation" x="-1004" y="19"/>
         </scene>
     </scenes>
     <resources>
