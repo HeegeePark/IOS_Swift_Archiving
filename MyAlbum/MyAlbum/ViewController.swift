@@ -11,12 +11,12 @@ class ViewController: UIViewController {
 
     var currentValue = 0
     
+    // 레이블을 아울렛 연결
     @IBOutlet weak var priceLabel: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        priceLabel.text = "₩ \(currentValue)"
+        refresh()
     }
     
     @IBAction func showAlert(_ sender: Any) {
@@ -35,10 +35,14 @@ class ViewController: UIViewController {
         // present로 얼럿 띄우기
         present(alert, animated: true, completion: nil)
         
+        refresh()
+    }
+    
+    // 가격 초기화
+    func refresh() {
         let randomPrice = arc4random_uniform(10000) + 1
         currentValue = Int(randomPrice)
         priceLabel.text = "₩ \(currentValue)"
     }
-    
 }
 
