@@ -1,4 +1,5 @@
 import UIKit
+import Foundation
 
 var str = "Hello, playground"
 
@@ -73,3 +74,31 @@ if hours > 40 {
 salary += hours * payPerHour
 
 //    print(hours)
+
+
+// ---- For Loop
+
+let closedRange = 0...10
+let halfClosedRange = 0..<10    // 0부터 9까지 (10 불포함)
+
+
+var sum = 0
+for i in closedRange {
+    print("---> \(i)")
+    sum += i
+}
+
+print("total: \(sum)")
+
+
+var sinValue: CGFloat = 0
+for i in closedRange {
+    sinValue = sin(CGFloat.pi/4 * CGFloat(i))
+}
+
+
+let name = "Jason"
+// for문 안에서 i가 쓰이지 않는다면, _로 대체 가능
+for _ in closedRange {
+//    print("--> name: \(name)")
+}
