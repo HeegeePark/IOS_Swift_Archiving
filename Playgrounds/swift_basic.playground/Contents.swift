@@ -102,3 +102,44 @@ let name = "Jason"
 for _ in closedRange {
 //    print("--> name: \(name)")
 }
+
+
+// ---- Switch
+
+
+let num = 5
+switch num {
+case _ where num % 2 == 0:      // where절 사용
+    print("---> 짝수")
+default:
+    print("---> 홀수")
+}
+
+//let coordinate = (x: 10, y: 10)
+//
+//switch coordinates {        // 좌표 위치 찾기 Switch
+//case (0, 0):
+//    print("---> 원점이네요")
+//case (_, 0):
+//    print("---> x축이네요")
+//case (0, _):
+//    print("---> y축이네요")
+//default:
+//    print("---> 좌표 어딘가")
+//}
+
+let coordinate = (x: 10, y: 10)
+
+switch coordinates {        // 좌표 위치 찾기 Switch_2
+case (0, 0):
+    print("---> 원점이네요")
+case (let x, 0):
+    print("---> x축이네요, x: \(x)")
+case (0, let y):
+    print("---> y축이네요, y:\(y)")
+case (let x, let y) where x == y:
+    print("---> x랑 y랑 같음 x,y = \(x),\(y)")
+case (let x, let y):
+    print("---> 좌표 어딘가 x,y = \(x),\(y)")
+}
+
