@@ -5,6 +5,8 @@
 //  Created by 박희지 on 2021/01/04.
 //
 
+// 앱이 실제로 실행될 때 여기있는 메서드들 호출됨.
+
 import UIKit
 
 @main
