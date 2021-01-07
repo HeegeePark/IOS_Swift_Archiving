@@ -40,7 +40,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2l-Tm-KBd">
-                                                    <rect key="frame" x="159" y="93" width="189" height="53"/>
+                                                    <rect key="frame" x="159" y="99" width="189" height="53"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -106,18 +106,48 @@
                                     <action selector="close:" destination="BWe-RY-xd9" eventType="touchUpInside" id="xV0-i6-4fE"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B4r-1D-872">
+                                <rect key="frame" x="30" y="100" width="354" height="505.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="B4r-1D-872" secondAttribute="height" multiplier="7:10" id="ref-al-kqC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luffy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emP-C9-iPf">
+                                <rect key="frame" x="168.5" y="655.5" width="77" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMC-qR-Ang">
+                                <rect key="frame" x="134.5" y="722.5" width="145" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XPq-dn-W0Q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="HMC-qR-Ang" firstAttribute="top" secondItem="emP-C9-iPf" secondAttribute="bottom" constant="31" id="0b8-gw-T7U"/>
+                            <constraint firstItem="B4r-1D-872" firstAttribute="leading" secondItem="XPq-dn-W0Q" secondAttribute="leading" constant="30" id="Fva-S8-ONI"/>
                             <constraint firstItem="XPq-dn-W0Q" firstAttribute="top" secondItem="efy-Fc-iou" secondAttribute="top" constant="-20" id="Z37-rk-npk"/>
                             <constraint firstItem="XPq-dn-W0Q" firstAttribute="trailing" secondItem="efy-Fc-iou" secondAttribute="trailing" constant="16" id="ijb-vY-PCe"/>
+                            <constraint firstItem="B4r-1D-872" firstAttribute="top" secondItem="XPq-dn-W0Q" secondAttribute="top" constant="100" id="r0A-0b-Uyk"/>
+                            <constraint firstItem="emP-C9-iPf" firstAttribute="top" secondItem="B4r-1D-872" secondAttribute="bottom" constant="50" id="r4N-9a-jW8"/>
+                            <constraint firstItem="B4r-1D-872" firstAttribute="centerX" secondItem="XPq-dn-W0Q" secondAttribute="centerX" id="yJD-bT-U5k"/>
+                            <constraint firstItem="HMC-qR-Ang" firstAttribute="centerX" secondItem="emP-C9-iPf" secondAttribute="centerX" id="yh2-IY-DGX"/>
+                            <constraint firstItem="emP-C9-iPf" firstAttribute="centerX" secondItem="B4r-1D-872" secondAttribute="centerX" id="zJv-U2-Ahz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bountyLabel" destination="HMC-qR-Ang" id="PWX-4W-Hde"/>
+                        <outlet property="imgView" destination="B4r-1D-872" id="T3K-Wn-Rmd"/>
+                        <outlet property="nameLabel" destination="emP-C9-iPf" id="mFD-Zh-Atl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcP-fp-Iad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="341" y="66"/>
+            <point key="canvasLocation" x="340.57971014492756" y="65.625"/>
         </scene>
     </scenes>
     <resources>
