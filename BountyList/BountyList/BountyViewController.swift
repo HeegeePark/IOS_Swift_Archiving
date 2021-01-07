@@ -40,7 +40,8 @@ class BountyViewController: UIViewController, UITableViewDataSource, UITableView
     // UITableViewDelegate
     // 클릭이 되면 어떻게 응답할 것인지
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("-->\(indexPath)")
+        // showDetail segue 실행
+        performSegue(withIdentifier: "showDetail", sender: nil)
     }
 }
 
