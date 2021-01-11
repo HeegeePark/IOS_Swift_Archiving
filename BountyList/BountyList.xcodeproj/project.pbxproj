@@ -16,6 +16,7 @@
 		4FE03DA925A32F67006F1ACD /* BountyListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE03DA825A32F67006F1ACD /* BountyListUITests.swift */; };
 		4FE03DBD25A33157006F1ACD /* BountyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE03DBC25A33157006F1ACD /* BountyViewController.swift */; };
 		4FE03DC225A6DBF2006F1ACD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE03DC125A6DBF2006F1ACD /* DetailViewController.swift */; };
+		4FE03DC725AC9F98006F1ACD /* BountyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE03DC625AC9F98006F1ACD /* BountyInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		4FE03DAA25A32F67006F1ACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FE03DBC25A33157006F1ACD /* BountyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyViewController.swift; sourceTree = "<group>"; };
 		4FE03DC125A6DBF2006F1ACD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		4FE03DC625AC9F98006F1ACD /* BountyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				4FE03DC125A6DBF2006F1ACD /* DetailViewController.swift */,
 				4FE03D8F25A32F67006F1ACD /* Assets.xcassets */,
 				4FE03DBC25A33157006F1ACD /* BountyViewController.swift */,
+				4FE03DC625AC9F98006F1ACD /* BountyInfo.swift */,
 				4FE03D9125A32F67006F1ACD /* LaunchScreen.storyboard */,
 				4FE03D9425A32F67006F1ACD /* Info.plist */,
 			);
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE03DC725AC9F98006F1ACD /* BountyInfo.swift in Sources */,
 				4FE03D8725A32F66006F1ACD /* AppDelegate.swift in Sources */,
 				4FE03DBD25A33157006F1ACD /* BountyViewController.swift in Sources */,
 				4FE03D8925A32F66006F1ACD /* SceneDelegate.swift in Sources */,
