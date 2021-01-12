@@ -119,13 +119,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luffy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emP-C9-iPf">
-                                <rect key="frame" x="168.5" y="655.5" width="77" height="36"/>
+                                <rect key="frame" x="168.5" y="645.5" width="77" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMC-qR-Ang">
-                                <rect key="frame" x="134.5" y="722.5" width="145" height="36"/>
+                                <rect key="frame" x="134.5" y="712.5" width="145" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -139,7 +139,7 @@
                             <constraint firstItem="XPq-dn-W0Q" firstAttribute="top" secondItem="efy-Fc-iou" secondAttribute="top" constant="-20" id="Z37-rk-npk"/>
                             <constraint firstItem="XPq-dn-W0Q" firstAttribute="trailing" secondItem="efy-Fc-iou" secondAttribute="trailing" constant="16" id="ijb-vY-PCe"/>
                             <constraint firstItem="B4r-1D-872" firstAttribute="top" secondItem="XPq-dn-W0Q" secondAttribute="top" constant="100" id="r0A-0b-Uyk"/>
-                            <constraint firstItem="emP-C9-iPf" firstAttribute="top" secondItem="B4r-1D-872" secondAttribute="bottom" constant="50" id="r4N-9a-jW8"/>
+                            <constraint firstItem="emP-C9-iPf" firstAttribute="top" secondItem="B4r-1D-872" secondAttribute="bottom" constant="40" id="r4N-9a-jW8"/>
                             <constraint firstItem="B4r-1D-872" firstAttribute="centerX" secondItem="XPq-dn-W0Q" secondAttribute="centerX" id="yJD-bT-U5k"/>
                             <constraint firstItem="HMC-qR-Ang" firstAttribute="centerX" secondItem="emP-C9-iPf" secondAttribute="centerX" id="yh2-IY-DGX"/>
                             <constraint firstItem="emP-C9-iPf" firstAttribute="centerX" secondItem="B4r-1D-872" secondAttribute="centerX" id="zJv-U2-Ahz"/>
