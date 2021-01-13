@@ -44,42 +44,72 @@ class DetailViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showAnimation()
-        
     }
     
     private func prepareAnimation() {
-        nameLabelCenterX.constant = view.bounds.width
-        bountyLabelCenterX.constant = view.bounds.width
+//        nameLabelCenterX.constant = view.bounds.width
+//        bountyLabelCenterX.constant = view.bounds.width
+        
+        // 변형 가하기
+        nameLabel.transform = CGAffineTransform(translationX: view.bounds.width, y: 0)
+            .scaledBy(x: 3, y: 3)
+            .rotated(by: 180)
+        
+        bountyLabel.transform = CGAffineTransform(translationX: view.bounds.width, y: 0)
+            .scaledBy(x: 3, y: 3)
+            .rotated(by: 180)
+        
+        nameLabel.alpha = 0
+        bountyLabel.alpha = 0
     }
     
     private func showAnimation() {
-        // constant가 0 = 가운데에 있음
-        // 레이아웃의 값 변경됨.
-        nameLabelCenterX.constant = 0
-        bountyLabelCenterX.constant = 0
-        
-        // withDuration: 얼마동안 일어날 것인가?
-        // delay: 애니메이션이 일어나기 전 얼마나 딜레이 할지
-        // options: 애니메이션 어떤 효과?
-        // animations: 애니메이션 실행 부분
-        // completion: 애니메이션이 끝난 후 할 부분
-//        UIView.animate(withDuration: 0.3,
+//        // constant가 0 = 가운데에 있음
+//        // 레이아웃의 값 변경됨.
+//        nameLabelCenterX.constant = 0
+//        bountyLabelCenterX.constant = 0
+//        
+//        // withDuration: 얼마동안 일어날 것인가?
+//        // delay: 애니메이션이 일어나기 전 얼마나 딜레이 할지
+//        // options: 애니메이션 어떤 효과?
+//        // animations: 애니메이션 실행 부분
+//        // completion: 애니메이션이 끝난 후 할 부분
+////        UIView.animate(withDuration: 0.3,
+////                       delay: 0.1,
+////                       options: .curveEaseIn,
+////                       animations: {
+////            self.view.layoutIfNeeded()
+////        }, completion: nil)
+//        
+//        // 스프링같이 통통뛰는 효과 줄 수 있음
+//        // layoutIfNeeded(): 레이아웃을 다시 조정해야하면 하렴
+//        UIView.animate(withDuration: 0.5,
 //                       delay: 0.1,
-//                       options: .curveEaseIn,
+//                       usingSpringWithDamping: 0.6,
+//                       initialSpringVelocity: 2,
+//                       options: .allowUserInteraction,
 //                       animations: {
 //            self.view.layoutIfNeeded()
 //        }, completion: nil)
+//        
+//        UIView.transition(with: imgView,
+//                          duration: 0.3,
+//                          options: .transitionFlipFromLeft,
+//                          animations: nil,
+//                          completion: nil
+//        )
         
-        // 스프링같이 통통뛰는 효과 줄 수 있음
-        // layoutIfNeeded(): 레이아웃을 다시 조정해야하면 하렴
-        UIView.animate(withDuration: 0.5,
-                       delay: 0.1,
-                       usingSpringWithDamping: 0.6,
-                       initialSpringVelocity: 2,
-                       options: .allowUserInteraction,
-                       animations: {
-            self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 2, options: .allowUserInteraction, animations: {
+            // identity로 변형을 가하기 전 접근 가능
+            self.nameLabel.transform = CGAffineTransform.identity
+            self.nameLabel.alpha = 1
         }, completion: nil)
+        
+        UIView.animate(withDuration: 1, delay: 0.2, usingSpringWithDamping: 0.6, initialSpringVelocity: 2, options: .allowUserInteraction, animations: {
+            self.bountyLabel.transform = CGAffineTransform.identity
+            self.bountyLabel.alpha = 1
+        }, completion: nil)
+        
         
         UIView.transition(with: imgView,
                           duration: 0.3,
@@ -95,7 +125,6 @@ class DetailViewController: UIViewController {
             nameLabel.text = bountyInfo.name
             bountyLabel.text = "\(bountyInfo.bounty)"
         }
-        
     }
    
     @IBAction func close(_ sender: Any) {
@@ -109,5 +138,4 @@ class DetailViewModel {
     func update(model: BountyInfo?) {
         bountyInfo = model
     }
-    
 }
