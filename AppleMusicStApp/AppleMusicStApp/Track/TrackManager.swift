@@ -26,12 +26,11 @@ class TrackManager {
     func loadTracks() -> [AVPlayerItem] {
         // 파일들 읽어서 AVPlayerItem 만들기
         let urls = Bundle.main.urls(forResourcesWithExtension: "mp3", subdirectory: nil) ?? []
-        
+
         // 고차함수 map 사용하여 음원 넘기기
         let items = urls.map { url in
             return AVPlayerItem(url: url)
         }
-        
         return items
     }
     
