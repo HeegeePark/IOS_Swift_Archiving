@@ -55,7 +55,7 @@ class TrackManager {
         return albums
     }
 
-    // TODO: 오늘의 트랙 랜덤으로 선책
+    // TODO: 오늘의 트랙 랜덤으로 선택
     func loadOtherTodaysTrack() {
         self.todaysTrack = self.tracks.randomElement()
     }
