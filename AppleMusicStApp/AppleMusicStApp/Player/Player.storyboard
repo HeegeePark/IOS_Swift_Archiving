@@ -73,6 +73,7 @@
                         <viewLayoutGuide key="safeArea" id="99H-cF-MlY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="WmF-8A-Haj" firstAttribute="centerX" secondItem="FDF-hO-k4B" secondAttribute="centerX" id="0Mc-o8-2Wx"/>
                             <constraint firstItem="MrT-Lp-4Bn" firstAttribute="top" secondItem="FDF-hO-k4B" secondAttribute="bottom" constant="10" id="4ie-Kr-AyF"/>
                             <constraint firstItem="MrT-Lp-4Bn" firstAttribute="leading" secondItem="FDF-hO-k4B" secondAttribute="leading" id="Juj-QS-UuM"/>
                             <constraint firstItem="PAL-H6-epj" firstAttribute="centerX" secondItem="99H-cF-MlY" secondAttribute="centerX" id="LO4-2D-S7J"/>
@@ -87,7 +88,6 @@
                             <constraint firstItem="Qj6-4V-4gQ" firstAttribute="trailing" secondItem="FDF-hO-k4B" secondAttribute="trailing" id="uDa-Qr-lLE"/>
                             <constraint firstItem="1QR-lu-Ww4" firstAttribute="top" secondItem="PAL-H6-epj" secondAttribute="bottom" constant="59" id="x1G-zE-oCX"/>
                             <constraint firstItem="Qj6-4V-4gQ" firstAttribute="top" secondItem="FDF-hO-k4B" secondAttribute="bottom" constant="10" id="xfd-Tp-JT7"/>
-                            <constraint firstItem="WmF-8A-Haj" firstAttribute="centerX" secondItem="1QR-lu-Ww4" secondAttribute="centerX" id="zWZ-2W-KiN"/>
                         </constraints>
                     </view>
                     <connections>
@@ -97,6 +97,7 @@
                         <outlet property="thumbnailImageView" destination="PAL-H6-epj" id="t9s-yJ-Pwn"/>
                         <outlet property="timeSlider" destination="FDF-hO-k4B" id="SU7-cI-F9H"/>
                         <outlet property="titleLabel" destination="1QR-lu-Ww4" id="JTA-I8-W0U"/>
+                        <outlet property="titleLabelCenterX" destination="Yq7-Yo-CnP" id="MO8-zB-GWq"/>
                         <outlet property="totalDurationLabel" destination="Qj6-4V-4gQ" id="HeP-fs-bfR"/>
                     </connections>
                 </viewController>

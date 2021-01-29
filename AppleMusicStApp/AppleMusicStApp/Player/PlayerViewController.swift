@@ -21,10 +21,13 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var totalDurationLabel: UILabel!
     
+    @IBOutlet weak var titleLabelCenterX: NSLayoutConstraint!
+    
     //TODO: SimplePlayer 만들고 프로퍼티 추가
     let simplePlayer = SimplePlayer.shared      // 돌려쓰는 플레이어(싱글톤)를 사용하겠다
     var timeObserver: Any?
     var isSeeking: Bool = false
+    var isLongTitle: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,14 +45,19 @@ class PlayerViewController: UIViewController {
         super.viewWillAppear(animated)
         updateTintColor()
         updateTrackInfo()
+        updateTitleAnimation()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showAnimation()
+        
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         // TODO: 뷰나갈때 처리 > 심플플레이어
         simplePlayer.pause()
         simplePlayer.replaceCurrentItem(with: nil)
-        
     }
     
     @IBAction func beginDrag(_ sender: UISlider) {
@@ -66,7 +74,6 @@ class PlayerViewController: UIViewController {
         let seconds = position * simplePlayer.totalDurationTime
         let time = CMTime(seconds: seconds, preferredTimescale: 100)
         simplePlayer.seek(to: time)
-        
     }
     
     @IBAction func togglePlayButton(_ sender: UIButton) {
@@ -129,5 +136,31 @@ extension PlayerViewController {
             let image = UIImage(systemName: "play.fill", withConfiguration: configuration)
             playControlButton.setImage(image, for: .normal)
         }
+    }
+    
+    func updateTitleAnimation() {
+//        let titleWidth = titleLabel.frame.midX
+//        print(titleWidth)
+//        let titleHandler: (CGFloat) -> Void = { item in
+//            self.isLongTitle = item > self.view.bounds.width
+//            self.prepareAnimation()
+//        }
+//        titleHandler(titleWidth)
+        prepareAnimation()
+    }
+}
+
+extension PlayerViewController {
+    private func prepareAnimation() {
+        titleLabelCenterX.constant += 50
+    }
+    
+    private func showAnimation() {
+        // TODO: 왼쪽으로 사라져서 오른쪽에서 다시 나타나기
+//        print(isLongTitle)
+        titleLabelCenterX.constant = -(view.bounds.width)
+        UIView.animate(withDuration: 5, delay: 1, options: [.repeat, .curveEaseIn], animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
     }
 }
