@@ -156,7 +156,8 @@ class TodoListCell: UICollectionViewCell {
     }
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
-        // TODO: deleteButton 처리 
+        // TODO: deleteButton 처리
+        // 뷰는 최대한 뷰 관련된거만 코드짜는게 깔끔해서 핸들러로 넘겨줘서 사용하는 곳에서 핸들러 정의함.
         deleteButtonTapHandler?()
     }
 }

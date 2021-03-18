@@ -10,6 +10,7 @@ import UIKit
 
 
 // TODO: Codable과 Equatable 추가
+// 객체 간의 동등 비교를 위해서는 Equatable 필요
 struct Todo: Codable, Equatable {
     let id: Int
     var isDone: Bool
@@ -18,15 +19,20 @@ struct Todo: Codable, Equatable {
     
     mutating func update(isDone: Bool, detail: String, isToday: Bool) {
         // TODO: update 로직 추가
+        self.isDone = isDone
+        self.detail = detail
+        self.isToday = isToday
         
     }
     
     static func == (lhs: Self, rhs: Self) -> Bool {
         // TODO: 동등 조건 추가
-        return true
+        // 왼쪽 아이디 == 오른쪽 아이디
+        return lhs.id == rhs.id
     }
 }
 
+// viewModel 객체에서 매니저 많이 사용할 예정
 class TodoManager {
     
     static let shared = TodoManager()
