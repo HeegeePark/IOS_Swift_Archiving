@@ -11,6 +11,7 @@ import UIKit
 
 // TODO: Codable과 Equatable 추가
 // 객체 간의 동등 비교를 위해서는 Equatable 필요
+// Codable로 json 파싱을 쉽게 할 수 있게 하고, struct를 json으로 쉽게 만들기도
 struct Todo: Codable, Equatable {
     let id: Int
     var isDone: Bool
