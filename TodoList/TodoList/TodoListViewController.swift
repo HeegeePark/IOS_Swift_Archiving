@@ -11,7 +11,7 @@ import UIKit
 class TodoListViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var inputViewBottom: NSLayoutConstraint!
+    @IBOutlet weak var inputViewBottom: NSLayoutConstraint! // 키보드 올라갈 때 같이 올라가야 해서 조정해야 함.
     @IBOutlet weak var inputTextField: UITextField!
     
     @IBOutlet weak var isTodayButton: UIButton!
@@ -23,27 +23,28 @@ class TodoListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                                 
         // TODO: 키보드 디텍션
         
         
         // [x] TODO: 데이터 불러오기
         todoListViewModel.loadTasks()
         
-        let todo = TodoManager.shared.createTodo(detail: "설거지하기 🙆‍♀️", isToday: true)
-        Storage.saveTodo(todo, fileName: "test.json")
+//        let todo = TodoManager.shared.createTodo(detail: "설거지하기 🙆‍♀️", isToday: true)
+//        Storage.saveTodo(todo, fileName: "test.json")
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let todo = Storage.restoreTodo("test.json")
-        print("---> restore from disk: \(todo)")
+//        let todo = Storage.restoreTodo("test.json")
+//        print("---> restore from disk: \(todo)")
     }
     
     @IBAction func isTodayButtonTapped(_ sender: Any) {
-        // TODO: 투데이 버튼 토글 작업
+        // x TODO: 투데이 버튼 토글 작업
+        isTodayButton.isSelected = !isTodayButton.isSelected
         
     }
     
