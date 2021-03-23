@@ -50,9 +50,18 @@ class TodoListViewController: UIViewController {
     }
     
     @IBAction func addTaskButtonTapped(_ sender: Any) {
-        // TODO: Todo 태스크 추가
+        
+        // text field에 글자있는지 확인
+        guard let detail = inputTextField.text, detail.isEmpty == false else { return }
+        // x TODO: Todo 태스크 추가
+        let todo = TodoManager.shared.createTodo(detail: detail, isToday: isTodayButton.isSelected)
         // add task to view model
+        todoListViewModel.addTodo(todo)
         // and tableview reload or update
+        collectionView.reloadData()
+        // defalut 모드로 변경
+        inputTextField.text = ""
+        isTodayButton.isSelected = false
     }
     
     // x TODO: BG 탭했을때, 키보드 내려오게 하기
@@ -111,8 +120,19 @@ extension TodoListViewController: UICollectionViewDataSource {
         }
         cell.updateUI(todo: todo)
         
-        // TODO: doneButtonHandler 작성
-        // TODO: deleteButtonHandler 작성
+        // x TODO: doneButtonHandler 작성
+        cell.doneButtonTapHandler = { isDone in
+            todo.isDone = isDone
+            self.todoListViewModel.updateTodo(todo)
+            self.collectionView.reloadData()
+        }
+        
+        // x TODO: deleteButtonHandler 작성
+        cell.deleteButtonTapHandler = {
+            self.todoListViewModel.deleteTodo(todo)
+            self.collectionView.reloadData()
+        }
+        
         return cell
     }
     
