@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher       // imagepath -> image 해주는 외부 라이브러리
 
 class SearchViewController: UIViewController {
 
@@ -32,7 +33,11 @@ extension SearchViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ResultCell", for: indexPath) as? ResultCell
         else { return UICollectionViewCell() }
         
-        cell.backgroundColor = .red
+        let movie = movies[indexPath.item]
+        // imagepath(string) -> image
+        let url = URL(string: movie.thumbnailPath)!
+        cell.movieThumbnail.kf.setImage(with: url)
+        
         return cell
     }
     
@@ -79,11 +84,14 @@ extension SearchViewController: UISearchBarDelegate {
         // - 결과물 받아와서, CollectionView로 표현
         
         SearchAPI.search(searchTerm) { movies in
-            // collectionview로 표현
+            // x collectionview로 표현
             print("---> 넘어온 영화 개수: \(movies.count), \(movies.first?.title)")
             
-            self.movies = movies
-            self.resultCollectionView.reloadData()
+            // ui 작업은 메인스레드에 넘겨줘야 함.
+            DispatchQueue.main.async {
+                self.movies = movies
+                self.resultCollectionView.reloadData()
+            }
         }
     }
 }
