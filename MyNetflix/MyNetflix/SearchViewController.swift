@@ -44,7 +44,20 @@ extension SearchViewController: UICollectionViewDataSource {
     
 }
 extension SearchViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // movie
+        // player vc
+        // player vc + movie
+        // presentiong player vc
+        
+        let movie = movies[indexPath.item]
+        
+        let sb = UIStoryboard(name: "Player", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "PlayerViewController") as! PlayerViewController
+        
+        vc.modalPresentationStyle = .fullScreen     // 풀스크린으로 vc 띄우기
+        present(vc, animated: false, completion: nil)
+    }
 }
 extension SearchViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

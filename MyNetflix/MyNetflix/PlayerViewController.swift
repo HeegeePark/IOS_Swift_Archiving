@@ -10,6 +10,11 @@ import UIKit
 
 class PlayerViewController: UIViewController {
 
+    // 오른쪽으로만 회전하게 방향 지정
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscapeRight
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
