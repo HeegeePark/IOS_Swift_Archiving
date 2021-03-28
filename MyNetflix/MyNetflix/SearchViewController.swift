@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher       // imagepath -> image 해주는 외부 라이브러리
+import AVFoundation
 
 class SearchViewController: UIViewController {
 
@@ -46,16 +47,19 @@ extension SearchViewController: UICollectionViewDataSource {
 extension SearchViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // movie
-        // player vc
-        // player vc + movie
-        // presentiong player vc
-        
         let movie = movies[indexPath.item]
+        let url = URL(string: movie.previewURL)!
+        let item = AVPlayerItem(url: url)
         
+        // player vc
         let sb = UIStoryboard(name: "Player", bundle: nil)
         let vc = sb.instantiateViewController(identifier: "PlayerViewController") as! PlayerViewController
-        
         vc.modalPresentationStyle = .fullScreen     // 풀스크린으로 vc 띄우기
+        
+        // player vc + movie
+        vc.player.replaceCurrentItem(with: item)
+        
+        // presentiong player vc
         present(vc, animated: false, completion: nil)
     }
 }
