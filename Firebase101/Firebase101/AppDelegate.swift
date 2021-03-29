@@ -5,6 +5,9 @@
 //  Created by 박희지 on 2021/03/30.
 //
 
+// https://firebase.google.com/docs/database/ios/start
+// https://firebase.google.com/docs/database/ios/structure-data
+
 import UIKit
 import Firebase
 
