@@ -17,8 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firebase data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38g-w7-hT6">
-                                <rect key="frame" x="194.5" y="443" width="71.5" height="13.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <rect key="frame" x="126" y="105" width="162.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of Customers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLJ-mM-1aC">
+                                <rect key="frame" x="115" y="186" width="186" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -26,12 +32,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="38g-w7-hT6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="399" id="81b-FL-AFq"/>
-                            <constraint firstItem="38g-w7-hT6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="23.25" id="FfX-5B-wa1"/>
+                            <constraint firstItem="38g-w7-hT6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="61" id="81b-FL-AFq"/>
+                            <constraint firstItem="38g-w7-hT6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="0.25" id="FfX-5B-wa1"/>
+                            <constraint firstItem="uLJ-mM-1aC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="1" id="NqU-4f-bNj"/>
+                            <constraint firstItem="uLJ-mM-1aC" firstAttribute="top" secondItem="38g-w7-hT6" secondAttribute="bottom" constant="47.5" id="SqA-5C-k4c"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dataLabel" destination="38g-w7-hT6" id="vXg-zW-HzM"/>
+                        <outlet property="numOfCustomers" destination="uLJ-mM-1aC" id="QUx-7F-Ikp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
