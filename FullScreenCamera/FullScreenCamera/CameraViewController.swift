@@ -128,6 +128,16 @@ class CameraViewController: UIViewController {
     
     @IBAction func capturePhoto(_ sender: UIButton) {
         // TODO: photoOutput의 capturePhoto 메소드
+        // orientation
+        // photo output
+        
+        let videoPreviewLayerOreintation = self.previewView.videoPreviewLayer.connection?.videoOrientation
+        sessionQueue.async {
+            let connection = self.photoOutput.connection(with: .video)
+            connection?.videoOrientation = videoPreviewLayerOreintation!
+            let setting = AVCapturePhotoSettings()
+            self.photoOutput.capturePhoto(with: setting, delegate: self)    // photo output에게 지금 찍자고 알려줌
+        }
 
 
     }
@@ -135,6 +145,20 @@ class CameraViewController: UIViewController {
     
     func savePhotoLibrary(image: UIImage) {
         // TODO: capture한 이미지 포토라이브러리에 저장
+        // 라이브러리 권한 요청해야 함
+        PHPhotoLibrary.requestAuthorization { status in
+            if status == .authorized {
+                // 저장
+                PHPhotoLibrary.shared().performChanges({
+                    PHAssetChangeRequest.creationRequestForAsset(from: image)
+                }) { (success, error) in
+                    print("--> 이미지 저장 완료했나? \(success)")
+                }
+            } else {
+                // 다시 요청
+                print("--> 권한을 받지 못함")
+            }
+        }
     }
 }
 
@@ -160,7 +184,6 @@ extension CameraViewController {
         }
         do {
             let videoDeviceInput = try AVCaptureDeviceInput(device: camera)
-            
             if captureSession.canAddInput(videoDeviceInput) {       // videoinput 넣어도 되겠니? 물어보기
                 captureSession.addInput(videoDeviceInput)
                 self.videoDeviceInput = videoDeviceInput
@@ -168,7 +191,6 @@ extension CameraViewController {
                 captureSession.commitConfiguration()
                 return
             }
-            
         } catch let error {
             captureSession.commitConfiguration()
             return
@@ -177,7 +199,6 @@ extension CameraViewController {
         // add photo output
         photoOutput.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey:
                                                                                     AVVideoCodecType.jpeg])], completionHandler: nil) // 사진 저장 형식 설정
-        
         if captureSession.canAddOutput(photoOutput) {
             captureSession.addOutput(photoOutput)
         } else {
@@ -211,7 +232,9 @@ extension CameraViewController {
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         // TODO: capturePhoto delegate method 구현
-        
-        
+        guard error == nil else { return }
+        guard let imageData = photo.fileDataRepresentation() else { return }
+        guard let image = UIImage(data: imageData) else { return }
+        self.savePhotoLibrary(image: image)
     }
 }
