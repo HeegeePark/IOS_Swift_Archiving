@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher       // imagepath -> image 해주는 외부 라이브러리
 import AVFoundation
+import Firebase
 
 class SearchViewController: UIViewController {
 
