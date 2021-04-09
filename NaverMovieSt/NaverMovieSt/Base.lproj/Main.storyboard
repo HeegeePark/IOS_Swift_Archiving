@@ -40,11 +40,11 @@
                                     <size key="itemSize" width="146" height="217"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7v3-zl-4YR">
-                                        <rect key="frame" x="0.0" y="0.0" width="146" height="217"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ResultCell" id="7v3-zl-4YR" customClass="ResultCell" customModule="NaverMovieSt" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="0.0" width="146" height="217"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3Aj-ci-tHZ">
                                             <rect key="frame" x="0.0" y="0.0" width="146" height="217"/>
@@ -52,6 +52,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OoK-If-Gmr">
                                                     <rect key="frame" x="0.0" y="0.0" width="146" height="217"/>
+                                                    <color key="backgroundColor" red="0.5669250294" green="0.59849686830000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -62,6 +63,9 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="146" height="217"/>
+                                        <connections>
+                                            <outlet property="movieThumbnail" destination="OoK-If-Gmr" id="kQ0-yq-mIA"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
