@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W6H-IK-FBf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--settings-->
+        <scene sceneID="wQm-gj-vHc">
+            <objects>
+                <viewController id="a3Q-zc-06G" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j9p-FD-LcN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JYG-Z6-Anz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="settings" image="gear" catalog="system" id="Hx3-NX-8EL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2BL-mq-IKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1492" y="-82"/>
+        </scene>
+        <!--movies-->
+        <scene sceneID="aC9-fP-u4a">
+            <objects>
+                <viewController id="Pzo-0v-exn" customClass="MovieViewController" customModule="NaverMovieSt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="svg-Di-8tO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uQc-5g-7ek">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bLN-XE-EHs">
+                                    <size key="itemSize" width="146" height="217"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7v3-zl-4YR">
+                                        <rect key="frame" x="0.0" y="0.0" width="146" height="217"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3Aj-ci-tHZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="146" height="217"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OoK-If-Gmr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="146" height="217"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OoK-If-Gmr" firstAttribute="leading" secondItem="3Aj-ci-tHZ" secondAttribute="leading" id="0cy-U7-tRt"/>
+                                                <constraint firstAttribute="trailing" secondItem="OoK-If-Gmr" secondAttribute="trailing" id="5NM-sk-5jd"/>
+                                                <constraint firstItem="OoK-If-Gmr" firstAttribute="top" secondItem="3Aj-ci-tHZ" secondAttribute="top" id="5YW-tt-bjQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="OoK-If-Gmr" secondAttribute="bottom" id="iZZ-jD-P5c"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="146" height="217"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pzo-0v-exn" id="kFe-MR-Pf6"/>
+                                    <outlet property="delegate" destination="Pzo-0v-exn" id="KK9-1Z-vmf"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3zJ-yN-Vyl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3zJ-yN-Vyl" firstAttribute="trailing" secondItem="uQc-5g-7ek" secondAttribute="trailing" id="8ps-nE-eWj"/>
+                            <constraint firstItem="uQc-5g-7ek" firstAttribute="top" secondItem="3zJ-yN-Vyl" secondAttribute="top" id="fK4-ab-euf"/>
+                            <constraint firstItem="uQc-5g-7ek" firstAttribute="leading" secondItem="3zJ-yN-Vyl" secondAttribute="leading" id="gnH-Vt-IHf"/>
+                            <constraint firstItem="3zJ-yN-Vyl" firstAttribute="bottom" secondItem="uQc-5g-7ek" secondAttribute="bottom" id="yXl-eh-9Xh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="movies" image="play.rectangle.fill" catalog="system" id="Sa5-b7-wt7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DgE-pQ-JCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1491.304347826087" y="-688.39285714285711"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="19y-Wt-n5N">
+            <objects>
+                <tabBarController id="W6H-IK-FBf" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k31-7u-ed4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemGreenColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Pzo-0v-exn" kind="relationship" relationship="viewControllers" id="dxq-jD-8Dl"/>
+                        <segue destination="a3Q-zc-06G" kind="relationship" relationship="viewControllers" id="5ie-7q-oHV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tjD-M2-dxT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="-385"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="play.rectangle.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
