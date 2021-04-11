@@ -5,11 +5,17 @@
 //  Created by 박희지 on 2021/04/09.
 //
 
+// 해야할 것
+// - 스토리보드에 스크롤뷰 깔기
+// - 장르버튼 w,h 픽스 및 테두리 둥글게
+// - 한 VC안에 두 개의 CollectionView 처리하는 법 찾기
+
 import UIKit
 
 class MovieViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var genreCollectionView: UICollectionView!
     @IBOutlet weak var resultCollectionView: UICollectionView!
     var movies: [Movie] = []
     override func viewDidLoad() {
@@ -49,6 +55,10 @@ extension MovieViewController: UICollectionViewDelegateFlowLayout {
         let height = width * 10/7
         return CGSize(width: width, height: height)
     }
+}
+
+class GenreCell: UICollectionViewCell {
+    @IBOutlet weak var genreButton: UIButton!
 }
 
 class ResultCell: UICollectionViewCell {
