@@ -33,8 +33,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="m2g-ps-FNu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZHf-sg-fV7"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uQc-5g-7ek">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bLN-XE-EHs">
                                     <size key="itemSize" width="146" height="217"/>
@@ -77,17 +84,24 @@
                         <viewLayoutGuide key="safeArea" id="3zJ-yN-Vyl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="m2g-ps-FNu" firstAttribute="top" secondItem="3zJ-yN-Vyl" secondAttribute="top" id="20y-cc-uGH"/>
+                            <constraint firstItem="3zJ-yN-Vyl" firstAttribute="trailing" secondItem="m2g-ps-FNu" secondAttribute="trailing" id="5oP-fA-Zh4"/>
                             <constraint firstItem="3zJ-yN-Vyl" firstAttribute="trailing" secondItem="uQc-5g-7ek" secondAttribute="trailing" id="8ps-nE-eWj"/>
-                            <constraint firstItem="uQc-5g-7ek" firstAttribute="top" secondItem="3zJ-yN-Vyl" secondAttribute="top" id="fK4-ab-euf"/>
+                            <constraint firstItem="m2g-ps-FNu" firstAttribute="leading" secondItem="3zJ-yN-Vyl" secondAttribute="leading" id="bUf-Zh-dh1"/>
+                            <constraint firstItem="uQc-5g-7ek" firstAttribute="top" secondItem="m2g-ps-FNu" secondAttribute="bottom" id="buc-ei-GvA"/>
                             <constraint firstItem="uQc-5g-7ek" firstAttribute="leading" secondItem="3zJ-yN-Vyl" secondAttribute="leading" id="gnH-Vt-IHf"/>
                             <constraint firstItem="3zJ-yN-Vyl" firstAttribute="bottom" secondItem="uQc-5g-7ek" secondAttribute="bottom" id="yXl-eh-9Xh"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="movies" image="play.rectangle.fill" catalog="system" id="Sa5-b7-wt7"/>
+                    <connections>
+                        <outlet property="resultCollectionView" destination="uQc-5g-7ek" id="JGY-NG-O3v"/>
+                        <outlet property="searchBar" destination="m2g-ps-FNu" id="KJX-Mh-6ac"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DgE-pQ-JCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1491.304347826087" y="-688.39285714285711"/>
+            <point key="canvasLocation" x="1491" y="-751"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="19y-Wt-n5N">

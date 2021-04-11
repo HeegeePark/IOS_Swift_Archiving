@@ -9,6 +9,8 @@ import UIKit
 
 class MovieViewController: UIViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var resultCollectionView: UICollectionView!
     var movies: [Movie] = []
     override func viewDidLoad() {
         super.viewDidLoad()
