@@ -29,4 +29,4 @@
 - CreateML을 이용하여 만든 개/고양이 분류기로 사진앱의 사진을 classification
 - 사용 skill 또는 지식 : Firebase(Realtime Database)
 
-<img src = "https://user-images.githubusercontent.com/47033052/114691602-cef56580-9d52-11eb-9d94-67f9da42d372.png" width= 20% />
+<img src = "https://user-images.githubusercontent.com/47033052/114691602-cef56580-9d52-11eb-9d94-67f9da42d372.png" width= 20% /> <img src = "https://user-images.githubusercontent.com/47033052/114692538-acb01780-9d53-11eb-8d10-f8fe2b802beb.png" width= 20% />
