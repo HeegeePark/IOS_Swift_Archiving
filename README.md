@@ -32,7 +32,7 @@
 <img src = "https://user-images.githubusercontent.com/47033052/114691602-cef56580-9d52-11eb-9d94-67f9da42d372.png" width= 20% /> <img src = "https://user-images.githubusercontent.com/47033052/114692538-acb01780-9d53-11eb-8d10-f8fe2b802beb.png" width= 20% />
 
 ## FullScreenCamera
-- Media Capture 및 사진 저장되는 Camera 앱
+- Media Capture 및 사진 저장되는 Camera 앱 (전면/후면 지원)
 - 사용 skill 또는 지식 : AVFoundation(Cameras and Media Capture)
 
-<img src = "" width= 20% /> <img src = "" width= 20% />
+<img src = "https://user-images.githubusercontent.com/47033052/114875456-42bd6e00-9e38-11eb-91ec-15ff0d247337.PNG" width= 20% /> <img src = "https://user-images.githubusercontent.com/47033052/114875394-36d1ac00-9e38-11eb-9c46-2bdf06697345.PNG" width= 20% />
