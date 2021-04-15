@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F19E1D62628A205002278E5 /* GenreCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F19E1D52628A205002278E5 /* GenreCollectionHeaderView.swift */; };
 		4F96132D262070B7005BE60F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F96132C262070B7005BE60F /* AppDelegate.swift */; };
 		4F96132F262070B7005BE60F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F96132E262070B7005BE60F /* SceneDelegate.swift */; };
 		4F961331262070B7005BE60F /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F961330262070B7005BE60F /* MovieViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F19E1D52628A205002278E5 /* GenreCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionHeaderView.swift; sourceTree = "<group>"; };
 		4F961329262070B7005BE60F /* NaverMovieSt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaverMovieSt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F96132C262070B7005BE60F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F96132E262070B7005BE60F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				4F96132E262070B7005BE60F /* SceneDelegate.swift */,
 				4F961330262070B7005BE60F /* MovieViewController.swift */,
 				4F961332262070B7005BE60F /* Main.storyboard */,
+				4F19E1D52628A205002278E5 /* GenreCollectionHeaderView.swift */,
 				4F9613412620758F005BE60F /* SettingViewController.swift */,
 				4F961335262070B8005BE60F /* Assets.xcassets */,
 				4F961337262070B8005BE60F /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F961331262070B7005BE60F /* MovieViewController.swift in Sources */,
+				4F19E1D62628A205002278E5 /* GenreCollectionHeaderView.swift in Sources */,
 				4F96132D262070B7005BE60F /* AppDelegate.swift in Sources */,
 				4F96132F262070B7005BE60F /* SceneDelegate.swift in Sources */,
 				4F9613422620758F005BE60F /* SettingViewController.swift in Sources */,

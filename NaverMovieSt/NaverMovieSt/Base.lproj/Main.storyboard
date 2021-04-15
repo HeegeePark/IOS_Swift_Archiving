@@ -24,56 +24,18 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oOw-UB-HhL">
-                                <rect key="frame" x="0.0" y="94" width="414" height="100"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="B6u-vG-gfl"/>
-                                </constraints>
-                                <collectionViewLayout key="collectionViewLayout" id="RFw-hg-j3n"/>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenreCell" id="5YZ-J9-9FS" customClass="GenreCell" customModule="NaverMovieSt" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LmJ-cR-2HS">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKr-r5-Rlx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <color key="backgroundColor" red="0.40743458809999999" green="0.53614035209999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <state key="normal" title="드라마"/>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="gKr-r5-Rlx" firstAttribute="top" secondItem="LmJ-cR-2HS" secondAttribute="top" id="3cC-83-Wc8"/>
-                                                <constraint firstItem="gKr-r5-Rlx" firstAttribute="leading" secondItem="LmJ-cR-2HS" secondAttribute="leading" id="HHU-ql-Rmg"/>
-                                                <constraint firstAttribute="trailing" secondItem="gKr-r5-Rlx" secondAttribute="trailing" id="b6y-iU-tJr"/>
-                                                <constraint firstAttribute="bottom" secondItem="gKr-r5-Rlx" secondAttribute="bottom" id="nne-ya-3nx"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <connections>
-                                            <outlet property="genreButton" destination="gKr-r5-Rlx" id="2Vb-K7-CZi"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="Pzo-0v-exn" id="bsK-zh-RzD"/>
-                                    <outlet property="delegate" destination="Pzo-0v-exn" id="yMR-Dx-D7R"/>
-                                </connections>
-                            </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uQc-5g-7ek">
-                                <rect key="frame" x="0.0" y="202" width="414" height="611"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bLN-XE-EHs">
                                     <size key="itemSize" width="146" height="217"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="100" height="90"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ResultCell" id="7v3-zl-4YR" customClass="ResultCell" customModule="NaverMovieSt" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="0.0" width="146" height="217"/>
+                                        <rect key="frame" x="8" y="90" width="146" height="217"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3Aj-ci-tHZ">
                                             <rect key="frame" x="0.0" y="0.0" width="146" height="217"/>
@@ -97,6 +59,57 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenreCollectionHeaderView" id="XSw-ol-wJR" customClass="GenreCollectionHeaderView" customModule="NaverMovieSt" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ruC-9V-ZRy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nrd-ys-14K">
+                                                <size key="itemSize" width="90" height="30"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenreCell" id="oBu-GC-H9o" customClass="GenreCell" customModule="NaverMovieSt" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ygo-Tr-ccC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7D-wg-u8P">
+                                                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                                <state key="normal" title="Button"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="T7D-wg-u8P" firstAttribute="top" secondItem="Ygo-Tr-ccC" secondAttribute="top" id="8BC-dC-G7l"/>
+                                                            <constraint firstAttribute="bottom" secondItem="T7D-wg-u8P" secondAttribute="bottom" id="SBm-T1-tDl"/>
+                                                            <constraint firstAttribute="trailing" secondItem="T7D-wg-u8P" secondAttribute="trailing" id="TAU-Ll-baL"/>
+                                                            <constraint firstItem="T7D-wg-u8P" firstAttribute="leading" secondItem="Ygo-Tr-ccC" secondAttribute="leading" id="uI0-dd-4PE"/>
+                                                        </constraints>
+                                                    </collectionViewCellContentView>
+                                                    <connections>
+                                                        <outlet property="genreButton" destination="T7D-wg-u8P" id="bAS-Ml-F8X"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="Pzo-0v-exn" id="ggo-2l-QAN"/>
+                                                <outlet property="delegate" destination="Pzo-0v-exn" id="BuN-Bj-go1"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ruC-9V-ZRy" firstAttribute="top" secondItem="XSw-ol-wJR" secondAttribute="top" id="EB8-sg-C88"/>
+                                        <constraint firstItem="ruC-9V-ZRy" firstAttribute="leading" secondItem="XSw-ol-wJR" secondAttribute="leading" id="t4v-gq-6EW"/>
+                                        <constraint firstAttribute="bottom" secondItem="ruC-9V-ZRy" secondAttribute="bottom" id="uaZ-Q9-Uw7"/>
+                                        <constraint firstAttribute="trailing" secondItem="ruC-9V-ZRy" secondAttribute="trailing" id="xmb-a8-KEz"/>
+                                    </constraints>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="Pzo-0v-exn" id="kFe-MR-Pf6"/>
                                     <outlet property="delegate" destination="Pzo-0v-exn" id="KK9-1Z-vmf"/>
@@ -106,14 +119,11 @@
                         <viewLayoutGuide key="safeArea" id="3zJ-yN-Vyl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="oOw-UB-HhL" firstAttribute="top" secondItem="m2g-ps-FNu" secondAttribute="bottom" id="1eR-eu-5kR"/>
                             <constraint firstItem="m2g-ps-FNu" firstAttribute="top" secondItem="3zJ-yN-Vyl" secondAttribute="top" id="20y-cc-uGH"/>
                             <constraint firstItem="3zJ-yN-Vyl" firstAttribute="trailing" secondItem="m2g-ps-FNu" secondAttribute="trailing" id="5oP-fA-Zh4"/>
                             <constraint firstItem="3zJ-yN-Vyl" firstAttribute="trailing" secondItem="uQc-5g-7ek" secondAttribute="trailing" id="8ps-nE-eWj"/>
-                            <constraint firstItem="uQc-5g-7ek" firstAttribute="top" secondItem="oOw-UB-HhL" secondAttribute="bottom" constant="8" symbolic="YES" id="E5q-5X-3wv"/>
-                            <constraint firstItem="oOw-UB-HhL" firstAttribute="leading" secondItem="3zJ-yN-Vyl" secondAttribute="leading" id="Xml-PX-M4L"/>
-                            <constraint firstItem="3zJ-yN-Vyl" firstAttribute="trailing" secondItem="oOw-UB-HhL" secondAttribute="trailing" id="aGL-k1-jN4"/>
                             <constraint firstItem="m2g-ps-FNu" firstAttribute="leading" secondItem="3zJ-yN-Vyl" secondAttribute="leading" id="bUf-Zh-dh1"/>
+                            <constraint firstItem="uQc-5g-7ek" firstAttribute="top" secondItem="m2g-ps-FNu" secondAttribute="bottom" id="gax-gT-qh6"/>
                             <constraint firstItem="uQc-5g-7ek" firstAttribute="leading" secondItem="3zJ-yN-Vyl" secondAttribute="leading" id="gnH-Vt-IHf"/>
                             <constraint firstItem="3zJ-yN-Vyl" firstAttribute="bottom" secondItem="uQc-5g-7ek" secondAttribute="bottom" id="yXl-eh-9Xh"/>
                         </constraints>
@@ -121,7 +131,7 @@
                     <tabBarItem key="tabBarItem" title="movies" image="play.rectangle.fill" catalog="system" id="Sa5-b7-wt7"/>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
-                        <outlet property="genreCollectionView" destination="oOw-UB-HhL" id="ms6-R4-rti"/>
+                        <outlet property="genreCollectionView" destination="ruC-9V-ZRy" id="zxs-Qb-oQD"/>
                         <outlet property="resultCollectionView" destination="uQc-5g-7ek" id="JGY-NG-O3v"/>
                         <outlet property="searchBar" destination="m2g-ps-FNu" id="KJX-Mh-6ac"/>
                     </connections>
@@ -138,7 +148,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <sections>
-                            <tableViewSection headerTitle="Settings" id="uwi-ag-kIB">
+                            <tableViewSection headerTitle="Naver Movie" id="uwi-ag-kIB">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BHX-z2-vek">
                                         <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
