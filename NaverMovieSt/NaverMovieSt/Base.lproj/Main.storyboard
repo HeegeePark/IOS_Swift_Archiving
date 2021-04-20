@@ -73,7 +73,7 @@
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenreCell" id="oBu-GC-H9o" customClass="GenreCell" customModule="NaverMovieSt" customModuleProvider="target">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenreCell" id="oBu-GC-H9o" userLabel="Genre Cell" customClass="GenreCell" customModule="NaverMovieSt" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ygo-Tr-ccC">
@@ -93,7 +93,7 @@
                                                         </constraints>
                                                     </collectionViewCellContentView>
                                                     <connections>
-                                                        <outlet property="genreButton" destination="T7D-wg-u8P" id="bAS-Ml-F8X"/>
+                                                        <outlet property="genreButton" destination="T7D-wg-u8P" id="O50-TF-s3m"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -109,6 +109,9 @@
                                         <constraint firstAttribute="bottom" secondItem="ruC-9V-ZRy" secondAttribute="bottom" id="uaZ-Q9-Uw7"/>
                                         <constraint firstAttribute="trailing" secondItem="ruC-9V-ZRy" secondAttribute="trailing" id="xmb-a8-KEz"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="genreCollectionView" destination="ruC-9V-ZRy" id="w5r-Jl-Htp"/>
+                                    </connections>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="Pzo-0v-exn" id="kFe-MR-Pf6"/>
@@ -213,7 +216,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOA-iv-bSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1113.0434782608697" y="424.55357142857139"/>
+            <point key="canvasLocation" x="958" y="425"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="19y-Wt-n5N">

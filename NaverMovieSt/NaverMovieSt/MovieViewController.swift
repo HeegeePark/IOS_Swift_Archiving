@@ -15,10 +15,9 @@ import UIKit
 class MovieViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var genreCollectionView: UICollectionView!
+//    @IBOutlet weak var genreCollectionView: UICollectionView!
     @IBOutlet weak var resultCollectionView: UICollectionView!
     var movies: [Movie] = []
-    var genres: [Genre] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -48,9 +47,9 @@ extension MovieViewController: UICollectionViewDataSource {
             // 헤더뷰 (장르 버튼 콜렉션뷰) 구성
 //            guard let genres = self.genres else { return UICollectionReusableView() }
             
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GenreCell", for: indexPath) as? GenreCell else {
-                        return UICollectionViewCell()
-                    }
+//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GenreCell", for: indexPath) as? GenreCell else {
+//                        return UICollectionViewCell()
+//                    }
             
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "GenreCollectionHeaderView", for: indexPath) as? GenreCollectionHeaderView else { return UICollectionReusableView() }
             
@@ -67,7 +66,7 @@ extension MovieViewController: UICollectionViewDelegate {
     
 }
 
-// collectionView cell 크기 조정
+// result collectionView cell 크기 조정
 extension MovieViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let margin: CGFloat = 8
@@ -79,13 +78,11 @@ extension MovieViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-class GenreCell: UICollectionViewCell {
-    @IBOutlet weak var genreButton: UIButton!
-}
-
 class ResultCell: UICollectionViewCell {
     @IBOutlet weak var movieThumbnail: UIImageView!
 }
+
+
 
 // Model movie
 struct Movie: Codable {
@@ -98,10 +95,5 @@ struct Movie: Codable {
     }
 }
 
-// Model genre
-struct Genre {
-    let id: Int
-    let genre: String
-    var isSelected: Bool
-}
+
 
